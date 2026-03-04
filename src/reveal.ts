@@ -113,12 +113,5 @@ export function init() {
 	}
 }
 
-// Ejecutar lo antes posible
-if (document.readyState === "loading") {
-	document.addEventListener("DOMContentLoaded", init);
-} else {
-	init();
-}
-
-// Soporte para Astro View Transitions
-document.addEventListener("astro:page-load", init);
+// Auto-init se maneja en auto-init.ts
+// Este archivo solo exporta las funciones para uso manual si es necesario

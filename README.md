@@ -16,7 +16,11 @@ Beautiful scroll-reveal animations for Astro with **zero JavaScript in productio
 ## 📦 Installation
 
 ```bash
+pnpm add @polgubau/astro-reveal
+# or
 npm install @polgubau/astro-reveal
+# or
+yarn add @polgubau/astro-reveal
 ```
 
 ## 🚀 Quick Start
@@ -240,7 +244,56 @@ element.addEventListener('reveal', (e) => {
 - ✅ IntersectionObserver (no scroll listeners)
 - ✅ Lazy initialization (only observes visible elements)
 
-## 📄 License
+## � Advanced Usage
+
+### Manual Initialization
+
+If you need more control, you can import and call `init()` manually:
+
+```astro
+<script>
+  import { init } from "@polgubau/astro-reveal/reveal";
+
+  // Initialize manually when you want
+  init();
+
+  // Or re-initialize after dynamic content loads
+  document.addEventListener('my-custom-event', () => {
+    init();
+  });
+</script>
+```
+
+### Programmatic Control
+
+```typescript
+import { init, getObserver } from "@polgubau/astro-reveal/reveal";
+
+// Initialize all reveal elements
+init();
+
+// Get a custom observer with specific settings
+const observer = getObserver(0.5, "0px");
+observer?.observe(myElement);
+```
+
+### Without Auto-initialization
+
+If you want to handle everything manually, import only the reveal module:
+
+```astro
+<script>
+  // This won't auto-initialize
+  import { init } from "@polgubau/astro-reveal/reveal";
+
+  // You control when to initialize
+  window.addEventListener('load', () => {
+    init();
+  });
+</script>
+```
+
+## �📄 License
 
 MIT © [polgubau](https://polgubau.com)
 
@@ -252,5 +305,4 @@ Contributions welcome! Please open an issue or PR.
 
 - [GitHub](https://github.com/polgubau/astro-reveal)
 - [NPM](https://www.npmjs.com/package/@polgubau/astro-reveal)
-- [Documentation](https://polgubau.com/docs/astro-reveal)
 

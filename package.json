@@ -7,6 +7,8 @@
 	"types": "./dist/index.d.ts",
 	"exports": {
 		".": "./dist/index.js",
+		"./auto-init": "./dist/auto-init.js",
+		"./reveal": "./dist/reveal.js",
 		"./Reveal.astro": "./src/Reveal.astro",
 		"./RevealList.astro": "./src/RevealList.astro",
 		"./styles": "./src/animations.css"

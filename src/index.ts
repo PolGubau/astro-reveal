@@ -5,8 +5,8 @@
  * @see https://github.com/polgubau/astro-reveal
  */
 
-// Re-export the reveal script /events of dom
-export * from "./reveal";
+// Re-export the reveal functions
+export { init, getObserver } from "./reveal";
 
 // Type exports for TypeScript users
 export type Direction =
@@ -35,5 +35,6 @@ export interface RevealOptions {
 	rootMargin?: string;
 }
 
-// Default export for script import
-import "./reveal";
+// Auto-initialization for Astro projects
+// This runs the reveal animations automatically when imported
+import "./auto-init";
