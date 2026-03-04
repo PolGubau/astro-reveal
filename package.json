@@ -1,0 +1,73 @@
+{
+	"name": "@polgubau/astro-reveal",
+	"version": "1.0.0",
+	"description": "Beautiful scroll-reveal animations for Astro with zero JavaScript in production",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": "./dist/index.js",
+		"./Reveal.astro": "./src/Reveal.astro",
+		"./RevealList.astro": "./src/RevealList.astro",
+		"./styles": "./src/animations.css"
+	},
+	"files": ["dist", "src"],
+	"scripts": {
+		"build": "tsc",
+		"typecheck": "tsc --noEmit",
+		"dev": "tsc --watch",
+		"lint": "eslint . --ext .ts,.astro",
+		"lint:fix": "eslint . --ext .ts,.astro --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"test": "echo \"No tests yet\" && exit 0",
+		"changeset": "changeset",
+		"version": "changeset version",
+		"release": "pnpm run build && changeset publish",
+		"prepublishOnly": "pnpm run build",
+		"prepack": "pnpm run build",
+		"validate": "pnpm run typecheck && pnpm run lint && pnpm run format:check && pnpm run build"
+	},
+	"keywords": [
+		"astro",
+		"astro-component",
+		"scroll-reveal",
+		"animations",
+		"intersection-observer",
+		"scroll-animations",
+		"reveal",
+		"fade-in"
+	],
+	"author": "polgubau <hola@polgubau.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/polgubau/astro-reveal"
+	},
+	"bugs": {
+		"url": "https://github.com/polgubau/astro-reveal/issues"
+	},
+	"homepage": "https://github.com/polgubau/astro-reveal#readme",
+	"peerDependencies": {
+		"astro": "^4.0.0 || ^5.0.0"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.27.1",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@typescript-eslint/parser": "^6.21.0",
+		"astro": "^5.0.0",
+		"astro-eslint-parser": "^0.16.3",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-astro": "^0.31.4",
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.13.0",
+		"typescript": "^5.0.0"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

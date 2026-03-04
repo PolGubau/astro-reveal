@@ -1,0 +1,29 @@
+# Development files
+.github/
+.changeset/
+.vscode/
+*.test.ts
+*.spec.ts
+__tests__/
+tests/
+examples/
+
+# Config files
+.eslintrc.json
+.eslintignore
+.prettierrc.json
+.prettierignore
+tsconfig.json
+
+# Documentation
+USAGE.md
+
+# Git
+.git/
+.gitignore
+
+# Misc
+*.log
+.DS_Store
+node_modules/
+
