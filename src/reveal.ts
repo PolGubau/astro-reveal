@@ -8,7 +8,7 @@
 // Map para observers con diferentes thresholds
 const observers = new Map<string, IntersectionObserver>();
 
-function getObserver(threshold: number, rootMargin: string) {
+export function getObserver(threshold: number, rootMargin: string) {
 	const key = `${threshold}-${rootMargin}`;
 
 	if (!observers.has(key)) {
@@ -46,7 +46,7 @@ function getObserver(threshold: number, rootMargin: string) {
 	return observers.get(key);
 }
 
-function init() {
+export function init() {
 	const elements = document.querySelectorAll<HTMLElement>(
 		"[data-reveal]:not([data-init])",
 	);

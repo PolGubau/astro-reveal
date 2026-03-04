@@ -5,8 +5,8 @@
  * @see https://github.com/polgubau/astro-reveal
  */
 
-// Re-export the reveal script
-export { default as reveal } from "./reveal";
+// Re-export the reveal script /events of dom
+export * from "./reveal";
 
 // Type exports for TypeScript users
 export type Direction =
