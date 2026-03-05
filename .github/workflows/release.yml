@@ -40,6 +40,8 @@ jobs:
           commit: 'chore: version packages'
           title: 'chore: version packages'
         env:
+          # Use PAT with repo and workflow permissions
+          # Or enable "Allow GitHub Actions to create and approve pull requests" in repo settings
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
