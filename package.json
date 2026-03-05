@@ -1,6 +1,6 @@
 {
 	"name": "@polgubau/astro-reveal",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Beautiful scroll-reveal animations for Astro with zero JavaScript in production",
 	"type": "module",
 	"packageManager": "pnpm@9.15.4",
@@ -14,7 +14,10 @@
 		"./RevealList.astro": "./src/RevealList.astro",
 		"./styles": "./src/animations.css"
 	},
-	"files": ["dist", "src"],
+	"files": [
+		"dist",
+		"src"
+	],
 	"scripts": {
 		"build": "tsc",
 		"typecheck": "tsc --noEmit",
