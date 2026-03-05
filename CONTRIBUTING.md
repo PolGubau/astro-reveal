@@ -5,6 +5,7 @@
 ## Desarrollo Local
 
 ### Requisitos
+
 - Node.js >= 18.0.0
 - pnpm >= 8.0.0
 
@@ -61,6 +62,7 @@ pnpm run changeset
 ```
 
 Selecciona el tipo de cambio:
+
 - **patch**: Bug fixes, cambios menores
 - **minor**: Nuevas features, cambios compatibles
 - **major**: Breaking changes
@@ -68,11 +70,13 @@ Selecciona el tipo de cambio:
 ## Guías de Estilo
 
 ### TypeScript
+
 - Usa tipos explícitos cuando sea necesario
 - Evita `any`, usa `unknown` si es necesario
 - Prefiere interfaces sobre types para objetos
 
 ### Commits
+
 Seguimos [Conventional Commits](https://www.conventionalcommits.org/):
 
 - `feat:` Nueva funcionalidad
@@ -84,6 +88,7 @@ Seguimos [Conventional Commits](https://www.conventionalcommits.org/):
 - `chore:` Tareas de mantenimiento
 
 ### Código
+
 - El código debe pasar `pnpm run validate`
 - Mantén las funciones pequeñas y enfocadas
 - Añade comentarios para lógica compleja
@@ -96,4 +101,3 @@ Actualmente no hay tests implementados. ¡Las contribuciones para añadir tests 
 ## Preguntas
 
 Si tienes preguntas, abre un [issue](https://github.com/polgubau/astro-reveal/issues) o contacta a [@polgubau](https://github.com/polgubau).
-

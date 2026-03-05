@@ -1,11 +1,11 @@
 ---
 /**
  * RevealList Component - Container for staggered reveal animations
- * 
+ *
  * @param stagger - Delay between each child animation in ms
  * @param as - HTML tag to render (default: 'div')
  * @param class - Additional CSS classes
- * 
+ *
  * @example
  * <RevealList stagger={100}>
  *   <Reveal direction="left">Item 1</Reveal>
@@ -19,14 +19,9 @@ interface Props {
   class?: string;
 }
 
-const {
-  stagger = 100,
-  as: Tag = "div",
-  class: className = "",
-} = Astro.props;
+const { stagger = 100, as: Tag = 'div', class: className = '' } = Astro.props;
 ---
 
 <Tag data-stagger={stagger} class={className}>
   <slot />
 </Tag>
-

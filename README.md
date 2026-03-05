@@ -31,16 +31,17 @@ yarn add @polgubau/astro-reveal
 ---
 // src/layouts/Layout.astro
 ---
+
 <html>
   <head>
     <!-- ... -->
   </head>
   <body>
     <slot />
-    
+
     <!-- Add reveal script -->
     <script>
-      import "@polgubau/astro-reveal";
+      import '@polgubau/astro-reveal';
     </script>
   </body>
 </html>
@@ -51,27 +52,23 @@ yarn add @polgubau/astro-reveal
 ```astro
 ---
 // src/layouts/Layout.astro
-import "@polgubau/astro-reveal/styles";
+import '@polgubau/astro-reveal/styles';
 ---
 ```
 
 ### 3. Use data attributes
 
 ```astro
-<div data-reveal="bottom">
-  Fades in from bottom
-</div>
+<div data-reveal="bottom">Fades in from bottom</div>
 
-<div data-reveal="scale" data-speed="fast" data-easing="bounce">
-  Scales in with bounce
-</div>
+<div data-reveal="scale" data-speed="fast" data-easing="bounce">Scales in with bounce</div>
 ```
 
 ### 4. Or use the component
 
 ```astro
 ---
-import { Reveal } from "@polgubau/astro-reveal";
+import { Reveal } from '@polgubau/astro-reveal';
 ---
 
 <Reveal direction="left" speed="fast" easing="smooth">
@@ -95,30 +92,30 @@ import { Reveal } from "@polgubau/astro-reveal";
 
 ### Speed Presets
 
-| Speed | Duration |
-|-------|----------|
-| `instant` | 200ms |
-| `fast` | 400ms |
-| `normal` | 700ms (default) |
-| `slow` | 1000ms |
+| Speed     | Duration        |
+| --------- | --------------- |
+| `instant` | 200ms           |
+| `fast`    | 400ms           |
+| `normal`  | 700ms (default) |
+| `slow`    | 1000ms          |
 
 ### Easing Presets
 
-| Easing | Curve | Use Case |
-|--------|-------|----------|
-| `smooth` | cubic-bezier(0.4, 0, 0.2, 1) | General (default) |
-| `bounce` | cubic-bezier(0.68, -0.55, 0.265, 1.55) | Playful |
-| `elastic` | cubic-bezier(0.34, 1.56, 0.64, 1) | Elastic bounce |
-| `sharp` | cubic-bezier(0.4, 0, 0.6, 1) | Quick movements |
-| `soft` | cubic-bezier(0.25, 0.1, 0.25, 1) | Smooth & elegant |
+| Easing    | Curve                                  | Use Case          |
+| --------- | -------------------------------------- | ----------------- |
+| `smooth`  | cubic-bezier(0.4, 0, 0.2, 1)           | General (default) |
+| `bounce`  | cubic-bezier(0.68, -0.55, 0.265, 1.55) | Playful           |
+| `elastic` | cubic-bezier(0.34, 1.56, 0.64, 1)      | Elastic bounce    |
+| `sharp`   | cubic-bezier(0.4, 0, 0.6, 1)           | Quick movements   |
+| `soft`    | cubic-bezier(0.25, 0.1, 0.25, 1)       | Smooth & elegant  |
 
 ### Distance Presets
 
-| Distance | Pixels |
-|----------|--------|
-| `small` | 16px |
+| Distance | Pixels         |
+| -------- | -------------- |
+| `small`  | 16px           |
 | `medium` | 32px (default) |
-| `large` | 64px |
+| `large`  | 64px           |
 
 ### Data Attributes
 
@@ -141,9 +138,12 @@ import { Reveal } from "@polgubau/astro-reveal";
 
 ```astro
 <div data-stagger="100">
-  <div data-reveal="bottom">Item 1</div>  <!-- 0ms -->
-  <div data-reveal="bottom">Item 2</div>  <!-- 100ms -->
-  <div data-reveal="bottom">Item 3</div>  <!-- 200ms -->
+  <div data-reveal="bottom">Item 1</div>
+  <!-- 0ms -->
+  <div data-reveal="bottom">Item 2</div>
+  <!-- 100ms -->
+  <div data-reveal="bottom">Item 3</div>
+  <!-- 200ms -->
 </div>
 ```
 
@@ -151,7 +151,7 @@ import { Reveal } from "@polgubau/astro-reveal";
 
 ```astro
 ---
-import { Reveal, RevealList } from "@polgubau/astro-reveal";
+import { Reveal, RevealList } from '@polgubau/astro-reveal';
 ---
 
 <Reveal
@@ -184,11 +184,11 @@ import { Reveal, RevealList } from "@polgubau/astro-reveal";
   <div data-reveal="scale" data-speed="fast" data-easing="bounce">
     <h1>Welcome</h1>
   </div>
-  
+
   <div data-reveal="bottom" data-speed="normal" data-easing="soft">
     <p>Subtitle</p>
   </div>
-  
+
   <div data-reveal="scale" data-speed="fast" data-easing="elastic">
     <button>CTA</button>
   </div>
@@ -199,11 +199,7 @@ import { Reveal, RevealList } from "@polgubau/astro-reveal";
 
 ```astro
 <div class="grid" data-stagger="150">
-  {items.map((item, i) => (
-    <div data-reveal={i % 2 === 0 ? "left" : "right"}>
-      {item}
-    </div>
-  ))}
+  {items.map((item, i) => <div data-reveal={i % 2 === 0 ? 'left' : 'right'}>{item}</div>)}
 </div>
 ```
 
@@ -212,20 +208,13 @@ import { Reveal, RevealList } from "@polgubau/astro-reveal";
 ### Custom Easing
 
 ```html
-<div
-  data-reveal="bottom"
-  data-easing="cubic-bezier(0.68, -0.55, 0.265, 1.55)"
->
-  Custom easing
-</div>
+<div data-reveal="bottom" data-easing="cubic-bezier(0.68, -0.55, 0.265, 1.55)">Custom easing</div>
 ```
 
 ### Custom Distance
 
 ```html
-<div data-reveal="left" data-distance="100">
-  100px distance
-</div>
+<div data-reveal="left" data-distance="100">100px distance</div>
 ```
 
 ### Events
@@ -252,7 +241,7 @@ If you need more control, you can import and call `init()` manually:
 
 ```astro
 <script>
-  import { init } from "@polgubau/astro-reveal/reveal";
+  import { init } from '@polgubau/astro-reveal/reveal';
 
   // Initialize manually when you want
   init();
@@ -267,13 +256,13 @@ If you need more control, you can import and call `init()` manually:
 ### Programmatic Control
 
 ```typescript
-import { init, getObserver } from "@polgubau/astro-reveal/reveal";
+import { init, getObserver } from '@polgubau/astro-reveal/reveal';
 
 // Initialize all reveal elements
 init();
 
 // Get a custom observer with specific settings
-const observer = getObserver(0.5, "0px");
+const observer = getObserver(0.5, '0px');
 observer?.observe(myElement);
 ```
 
@@ -284,7 +273,7 @@ If you want to handle everything manually, import only the reveal module:
 ```astro
 <script>
   // This won't auto-initialize
-  import { init } from "@polgubau/astro-reveal/reveal";
+  import { init } from '@polgubau/astro-reveal/reveal';
 
   // You control when to initialize
   window.addEventListener('load', () => {
@@ -305,4 +294,3 @@ Contributions welcome! Please open an issue or PR.
 
 - [GitHub](https://github.com/polgubau/astro-reveal)
 - [NPM](https://www.npmjs.com/package/@polgubau/astro-reveal)
-

@@ -1,7 +1,7 @@
 ---
 /**
  * Reveal Component - Scroll-reveal animations for Astro
- * 
+ *
  * @param direction - Animation direction
  * @param duration - Duration in ms (default: 700)
  * @param delay - Delay in ms (default: 0)
@@ -12,7 +12,7 @@
  * @param rootMargin - IntersectionObserver rootMargin
  * @param as - HTML tag to render (default: 'div')
  * @param class - Additional CSS classes
- * 
+ *
  * @example
  * <Reveal direction="top" speed="fast" easing="bounce">
  *   <h1>Animated heading</h1>
@@ -20,19 +20,19 @@
  */
 
 type Direction =
-  | "top"
-  | "bottom"
-  | "left"
-  | "right"
-  | "scale"
-  | "top-left"
-  | "top-right"
-  | "bottom-left"
-  | "bottom-right";
+  | 'top'
+  | 'bottom'
+  | 'left'
+  | 'right'
+  | 'scale'
+  | 'top-left'
+  | 'top-right'
+  | 'bottom-left'
+  | 'bottom-right';
 
-type Speed = "instant" | "fast" | "normal" | "slow";
-type Easing = "smooth" | "bounce" | "elastic" | "sharp" | "soft";
-type Distance = "small" | "medium" | "large";
+type Speed = 'instant' | 'fast' | 'normal' | 'slow';
+type Easing = 'smooth' | 'bounce' | 'elastic' | 'sharp' | 'soft';
+type Distance = 'small' | 'medium' | 'large';
 
 interface Props {
   direction?: Direction;
@@ -48,7 +48,7 @@ interface Props {
 }
 
 const {
-  direction = "bottom",
+  direction = 'bottom',
   duration,
   delay,
   speed,
@@ -56,8 +56,8 @@ const {
   distance,
   threshold,
   rootMargin,
-  as: Tag = "div",
-  class: className = "",
+  as: Tag = 'div',
+  class: className = '',
 } = Astro.props;
 ---
 
@@ -70,8 +70,7 @@ const {
   data-distance={distance}
   data-threshold={threshold}
   data-root-margin={rootMargin}
-  class:list={["reveal", className]}
+  class:list={['reveal', className]}
 >
   <slot />
 </Tag>
-

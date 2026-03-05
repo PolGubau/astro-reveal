@@ -5,6 +5,7 @@ Este directorio contiene los changesets para gestionar versiones y changelog aut
 ## Cómo usar
 
 1. Cuando hagas cambios, crea un changeset:
+
    ```bash
    npm run changeset
    ```
@@ -20,4 +21,3 @@ Este directorio contiene los changesets para gestionar versiones y changelog aut
 ## Más información
 
 https://github.com/changesets/changesets
-
