@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "Beautiful scroll-reveal animations for Astro with zero JavaScript in production",
 	"type": "module",
+	"packageManager": "pnpm@9.15.4",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"exports": {
