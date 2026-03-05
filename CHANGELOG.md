@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2
+
+### Patch Changes
+
+- ee36a4d: Fix ESLint configuration for Astro files and add auto-initialization support
+
 ## 1.0.1
 
 ### Patch Changes

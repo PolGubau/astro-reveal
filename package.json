@@ -1,6 +1,6 @@
 {
   "name": "@polgubau/astro-reveal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Beautiful scroll-reveal animations for Astro with zero JavaScript in production",
   "type": "module",
   "packageManager": "pnpm@9.15.4",
